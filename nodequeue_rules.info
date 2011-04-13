@@ -1,0 +1,10 @@
+; $Id$
+name = Nodequeue Rules
+core = 7.x
+description = "Adds rules integration for nodequeue submissions."
+package = Nodequeue
+files[] = nodequeue_rules.module
+files[] = nodequeue_rules.eval.inc
+files[] = nodequeue_rules.rules.inc
+dependencies[] = nodequeue
+dependencies[] = rules

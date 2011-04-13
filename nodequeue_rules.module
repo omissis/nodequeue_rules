@@ -1,0 +1,25 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ * Adds rules integration for nodequeue submissions.
+ */
+
+/**
+ * Implements of hook_form_alter().
+ */
+function nodequeue_rules_form_alter(&$form, $form_state, $form_id) {
+  if (strpos($form_id, 'nodequeue_client_form_') !== FALSE) {
+    // Add custom submit handler to nodequeue form.
+    $form['#submit'][] = 'nodequeue_rules_client_form_submit';
+  }
+}
+
+/**
+ * Custom submit handler for nodequeue submissions.
+ */
+function nodequeue_rules_client_form_submit($form, &$form_state) {
+  global $user;
+  // Do stuff
+}
