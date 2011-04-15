@@ -14,7 +14,7 @@ require_once('nodequeue_rules.eval.inc');
  * Implements hook_rules_file_info() on behalf of the nodequeue module.
  */
 function nodequeue_rules_rules_file_info() {
-  return array('modules/nodequeue_rules.eval');
+  return array('nodequeue_rules.eval');
 }
 
 /**
